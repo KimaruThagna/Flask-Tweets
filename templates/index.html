@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Twitter Sentiment Analysis</title>
+
+        <!-- CSS -->
+        <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Roboto:400,100,300,500">
+        <link rel="stylesheet" href="static/bootstrap/css/bootstrap.min.css">
+        <link rel="stylesheet" href="static/font-awesome/css/font-awesome.min.css">
+	    	<link rel="stylesheet" href="static/css/form-elements.css">
+        <link rel="stylesheet" href="static/css/style.css">
+
+
+        <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+        <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+        <!--[if lt IE 9]>
+            <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+            <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+        <![endif]-->
+
+        <!-- Favicon and touch icons -->
+        <link rel="shortcut icon" href="static/ico/UbiTwittousEye72_dark.png">
+        <link rel="apple-touch-icon-precomposed" sizes="144x144" href="static/ico/UbiTwittousEye144.png">
+        <link rel="apple-touch-icon-precomposed" sizes="114x114" href="static/ico/UbiTwittousEye144.png">
+        <link rel="apple-touch-icon-precomposed" sizes="72x72" href="static/ico/UbiTwittousEye72.png">
+        <link rel="apple-touch-icon-precomposed" href="static/ico/UbiTwittousEye72_dark.png">
+
+    </head>
+
+    <body>
+
+        <!-- Top content -->
+        <div class="top-content">
+
+            <div class="inner-bg">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-sm-10 col-sm-offset-1 text">
+                            <h1><strong>UbiTwittous</strong></h1>
+                            <div class="description">
+                            	<p>
+	                            	 <strong>M A C H I N E L E A R N I N G to analyze Sentiment and Factuality</strong>
+                            	</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+
+                        <div class="col-sm-12  form-box">
+                        	<div class="form-top">
+                        		<div class="form-top-left">
+                        			<h3>Search for Tweets about a subject
+                              <br>Apply Sentiment and Fact/Opinon filters</h3>
+                        		</div>
+                        		<div class="form-top-right">
+                        			<i class="fa fa-twitter"></i>
+                        		</div>
+                            </div>
+
+                            <div class="form-bottom">
+			                    <form role="form" id="form" class="login-form">
+			                    	<div class="form-group">
+			                    		<label class="sr-only" for="form-username">Username</label>
+			                        	<input type="text" name="tweet_search" placeholder="Search Tweets..." class="form-username form-control" id="form-username">
+			                        </div>
+<br>
+                                                       <button id="search_btn" class="btn">Search Tweets</button>
+                                                       <button data-toggle="tooltip" data-placement="top" title="Show all Tweets"  class="btn">Reset Filters</button>
+                                                     <br>
+                                                     <br>
+                                                      <button  data-toggle="tooltip" data-placement="left" title="Show only Positive Tweets" class="btn" id="psenti">Positive</button>
+                                                      <button data-toggle="tooltip" data-placement="left" title="Tweets which are Opinion"  id="opi" class="btn">Opinion</button>
+                                                      <button  data-toggle="tooltip" data-placement="left" title="Show only Negative Tweets"  class="btn" id="nsenti">Negative</button>
+                                                      <button  data-toggle="tooltip" data-placement="left" title="Factual Tweets"  id="fac" class="btn">Factual</button>
+                                                      <br>
+                                                      <br>
+                                                      <div style="height:200px;border:1px solid #ccc;font:16px/26px Georgia, Garamond, Serif;overflow:auto;" id="search_result">
+                                                          <ol id="search_list"></ol>
+                                                        </div>
+                                            </div>
+                                        </div>
+<!--                                        <div class="search_result_canvas">
+
+</div> -->
+                                    </div>
+			                    </form>
+		                    </div>
+                        </div>
+                    </div>
+***
+                    <!-- <div class="row">
+                       <div class="col-sm-6 col-sm-offset-3 social-login">
+                      	<h3>Code Available at :</h3>
+                        	<div class="social-login-buttons">
+	                        	<a class="btn btn-link-1 btn-link-1-facebook" href="#">
+	                        		<i class="fa fa-github"></i> Github
+	                        	</a>
+
+-->
+                        	</div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+        </div>
+
+
+        <!-- Javascript -->
+        <script src="static/js/jquery-1.11.1.min.js"></script>
+        <script src="static/bootstrap/js/bootstrap.min.js"></script>
+        <script src="static/js/jquery.backstretch.min.js"></script>
+        <script src="static/js/scripts.js"></script>
+        <script src="{{ url_for('static',filename='index.js') }}"></script>
+
+        <!--[if lt IE 10]>
+            <script src="static/js/placeholder.js"></script>
+        <![endif]-->
+
+    </body>
+
+</html>
