@@ -17,18 +17,18 @@ def index():
 @app.route("/search",methods=["POST"])
 def search():
     search_tweet = request.form.get("search_query")
-    t = []
+    textblob_scores = []
     vader_scores = []
     tweets = api.search(search_tweet, tweet_mode='extended')
 
     for tweet in tweets:
         polarity = TextBlob(tweet.full_text).sentiment.polarity
         subjectivity = TextBlob(tweet.full_text).sentiment.subjectivity
-        t.append([tweet.full_text,polarity,subjectivity])
+        textblob_scores.append([tweet.full_text,polarity,subjectivity])
         # using Vader sentiment analysis library
         score = analyzer.polarity_scores(tweet.full_text)  # obtain polarity index of given sentence.
         vader_scores.append([tweet.full_text, score])
 
-    return jsonify({"success":True,"tweet_analysis_textBlob":t, "tweet_Analysis_Vader":vader_scores})
+    return jsonify({"success":True,"tweet_analysis_textBlob":textblob_scores, "tweet_Analysis_Vader":vader_scores})
 
 app.run()
