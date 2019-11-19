@@ -44,7 +44,7 @@
                             <h1><strong>TwitterLytics</strong></h1>
                             <div class="description">
                             	<p>
-	                            	 <strong>M A C H I N E L E A R N I N G to analyze Sentiment and Factuality</strong>
+	                            	 <strong>M A C H I N E L E A R N I N G for Sentiment Analysis</strong>
                             	</p>
                             </div>
                         </div>
@@ -54,8 +54,8 @@
                         <div class="col-sm-12  form-box">
                         	<div class="form-top">
                         		<div class="form-top-left">
-                        			<h3>Search for Tweets about a subject
-                              <br>Apply Sentiment and Fact/Opinon filters</h3>
+                                    <h3>Search for Tweets about a subject</h3>
+
                         		</div>
                         		<div class="form-top-right">
                         			<i class="fa fa-twitter"></i>
@@ -63,22 +63,16 @@
                             </div>
 
                             <div class="form-bottom">
-			                    <form role="form" id="form" class="login-form">
+			                    <form role="form" id="form" class="login-form" action="/search">
 			                    	<div class="form-group">
 			                    		<label class="sr-only" for="form-username">Username</label>
 			                        	<input type="text" name="tweet_search" placeholder="Search Tweets..." class="form-username form-control" id="form-username">
 			                        </div>
 <br>
-                                                       <button id="search_btn" class="btn">Search Tweets</button>
+                                                       <input type="submit" class="btn" value="Search Tweets" />
                                                        <button data-toggle="tooltip" data-placement="top" title="Show all Tweets"  class="btn">Reset Filters</button>
                                                      <br>
-                                                     <br>
-                                                      <button  data-toggle="tooltip" data-placement="left" title="Show only Positive Tweets" class="btn" id="psenti">Positive</button>
-                                                      <button data-toggle="tooltip" data-placement="left" title="Tweets which are Opinion"  id="opi" class="btn">Opinion</button>
-                                                      <button  data-toggle="tooltip" data-placement="left" title="Show only Negative Tweets"  class="btn" id="nsenti">Negative</button>
-                                                      <button  data-toggle="tooltip" data-placement="left" title="Factual Tweets"  id="fac" class="btn">Factual</button>
-                                                      <br>
-                                                      <br>
+
                                                       <div style="height:200px;border:1px solid #ccc;font:16px/26px Georgia, Garamond, Serif;overflow:auto;" id="search_result">
                                                           <ol id="search_list"></ol>
                                                         </div>
@@ -92,25 +86,6 @@
 		                    </div>
                         </div>
                     </div>
-***
-                    <!-- <div class="row">
-                       <div class="col-sm-6 col-sm-offset-3 social-login">
-                      	<h3>Code Available at :</h3>
-                        	<div class="social-login-buttons">
-	                        	<a class="btn btn-link-1 btn-link-1-facebook" href="#">
-	                        		<i class="fa fa-github"></i> Github
-	                        	</a>
-
--->
-                        	</div>
-                        </div>
-                    </div>
-
-                </div>
-            </div>
-
-        </div>
-
 
         <!-- Javascript -->
         <script src="static/js/jquery-1.11.1.min.js"></script>

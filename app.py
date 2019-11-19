@@ -9,14 +9,14 @@ app = Flask(__name__)
 auth = tw.OAuthHandler(os.environ['CONSUMER_KEY'], os.environ['CONSUMER_SECRET'])
 auth.set_access_token(os.environ["ACCESS_TOKEN"], os.environ["ACCESS_TOKEN_SECRET"])
 api = tw.API(auth, wait_on_rate_limit=True)
-
+api = ""
 @app.route("/")
 def index():
     return render_template('index.html')
 
 @app.route("/search",methods=["POST"])
 def search():
-    search_tweet = request.form.get("search_query")
+    search_tweet = request.form.get("tweet_search")
     textblob_scores = []
     vader_scores = []
     tweets = api.search(search_tweet, tweet_mode='extended')
